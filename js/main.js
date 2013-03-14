@@ -608,7 +608,7 @@ changeCats();
 
 addPeep.addEventListener("click", validator);
 
-displayData.addEventListener("click", showData);
+displayData.addEventListener("click", showAllPeeps);
 
 clearData.addEventListener("click", clearLocal);
 

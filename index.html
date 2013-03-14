@@ -56,13 +56,13 @@
 
 		<div data-role="content">
 			<div id="peepForm">
-				<h1 >The Peep Cheat Sheet</h1>
-			<p>
-			<a href="#" id="displayData" data-role="button" data-icon="arrow-r" data-iconpos="right">display data</a>  <a href="#" id="cleardata" data-role="button">clear all data</a><a href="#" id="mopeeps" data-role="button">add peeps</a>
-			</p>
+				<div data-role="controlgroup" data-type="horizontal" align="center">
+					<a href="#searchPage" id="displayData" data-role="button">Show Data</a>  
+					<a href="#" id="cleardata" data-role="button">Clear All</a>
+					<!--<a href="#" id="mopeeps" data-role="button">add peeps</a>-->
+				</div>
 				<form action="#" method="post" >
 					<fieldset >
-						<h2 align="center">Peep Contact</h2>
 							<ul id="errors"s></ul>
 							<ul data-role="listview">
 								<li><input type="text" id="fname" placeholder="First Name"/></li>
