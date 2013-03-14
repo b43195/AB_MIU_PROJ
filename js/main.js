@@ -612,7 +612,7 @@ displayData.addEventListener("click", showAllPeeps);
 
 clearData.addEventListener("click", clearLocal);
 
-mopeeps.addEventListener("click", refresh);
+//mopeeps.addEventListener("click", refresh);
 
 searchNavBtn.addEventListener("click", showAllPeeps);
 
