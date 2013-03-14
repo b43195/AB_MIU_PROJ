@@ -28,7 +28,17 @@ var fname = document.getElementById("fname"),
 	mopeeps = document.getElementById("mopeeps"),
 	cats = document.getElementById("cats"),
 	catsGo = document.getElementById("catsGo"),
-
+	searchNavBtn = document.getElementById("searchNavBtn"),
+	famPagebtn = document.getElementById("famPagebtn")
+	cowoPagebtn = document.getElementById("cowoPagebtn"),
+	friendPagebtn = document.getElementById("friendPagebtn"),
+	frienemyPagebtn = document.getElementById("frienemyPagebtn"),
+	aquetPagebtn = document.getElementById("aquetPagebtn"),
+	allPeeps=document.getElementById("allPeeps"),
+	allcoWo= document.getElementById("allcoWo"),
+	allfriends=document.getElementById("allfriends"),
+	allaquentences=document.getElementById("allaquentences"),
+	allfrienemies=document.getElementById("allfrienemies"),
 	addPeep = document.getElementById("addPeep");
 
 
@@ -315,9 +325,9 @@ var validator = function(eventData){
 	}
 	if(errorMsgs.length >= 1){
 		for(i = 0; i < errorMsgs.length; i++){
-			var text = document.createElement("li");
-			text.innerHTML = errorMsgs[i];
-			errors.appendChild(text);
+			//var text = document.createElement("li");
+			alert(errorMsgs[i]);
+			//errors.appendChild(text);
 		}
 		eventData.preventDefault();
 		say(errorMsgs);
@@ -367,6 +377,230 @@ var browseCat = function(){
 	}
 }
 
+var showAllPeeps = function(){
+	//var addList = document.createElement("ul");
+	//addDiv.appendChild(addList);
+	//document.body.appendChild(addDiv);
+	localStorage.clear();
+	addDefaultPeeps();
+	
+	
+	for(i=0; i < localStorage.length; i++){
+		var addLi = document.createElement("li");
+		allPeeps.appendChild(addLi);
+
+		var editDeleteLks = document.createElement("li");
+
+		var storeKey = localStorage.key(i);
+		var value = localStorage.getItem(storeKey);
+		var peepItem = JSON.parse(value);
+
+		var addSubUl = document.createElement("ul");
+		addLi.innerHTML = peepItem.fname[1] + " " + peepItem.lname[1];
+		addLi.appendChild(addSubUl);
+
+		say(peepItem.cat[1])
+		getCatImage(peepItem.cat[1],addSubUl);
+
+		for(var n in peepItem){
+			var addSubLi = document.createElement("li");
+			addSubUl.appendChild(addSubLi);
+			var peepData = peepItem[n][0]+" "+peepItem[n][1];
+			addSubLi.innerHTML = peepData;
+			addSubUl.appendChild(editDeleteLks);
+		}
+		createEditDeleteLks(storeKey,addSubUl);
+	}
+}
+
+var showFamPeeps = function(){
+	//var addList = document.createElement("ul");
+	//addDiv.appendChild(addList);
+	//document.body.appendChild(addDiv);
+	localStorage.clear();
+	addDefaultPeeps();
+	
+	
+	for(i=0; i < localStorage.length; i++){
+		var addLi = document.createElement("li");
+
+		var editDeleteLks = document.createElement("li");
+
+		var storeKey = localStorage.key(i);
+		var value = localStorage.getItem(storeKey);
+		var peepItem = JSON.parse(value);
+
+		if(peepItem.cat[1] === "Family"){
+		var addSubUl = document.createElement("ul");
+		addLi.innerHTML = peepItem.fname[1] + " " + peepItem.lname[1];
+		addLi.appendChild(addSubUl);
+
+		say(peepItem.cat[1])
+		getCatImage(peepItem.cat[1],addSubUl);
+
+		for(var n in peepItem){
+			var addSubLi = document.createElement("li");
+			addSubUl.appendChild(addSubLi);
+			var peepData = peepItem[n][0]+" "+peepItem[n][1];
+			addSubLi.innerHTML = peepData;
+			addSubUl.appendChild(editDeleteLks);
+		}
+		createEditDeleteLks(storeKey,addSubUl);
+		allFamily.appendChild(addLi);
+		}
+	}
+}
+
+var showCowoPeeps = function(){
+	//var addList = document.createElement("ul");
+	//addDiv.appendChild(addList);
+	//document.body.appendChild(addDiv);
+	localStorage.clear();
+	addDefaultPeeps();
+	
+	
+	for(i=0; i < localStorage.length; i++){
+		var addLi = document.createElement("li");
+
+		var editDeleteLks = document.createElement("li");
+
+		var storeKey = localStorage.key(i);
+		var value = localStorage.getItem(storeKey);
+		var peepItem = JSON.parse(value);
+
+		if(peepItem.cat[1] === "Co-Worker"){
+		var addSubUl = document.createElement("ul");
+		addLi.innerHTML = peepItem.fname[1] + " " + peepItem.lname[1];
+		addLi.appendChild(addSubUl);
+
+		say(peepItem.cat[1])
+		getCatImage(peepItem.cat[1],addSubUl);
+
+		for(var n in peepItem){
+			var addSubLi = document.createElement("li");
+			addSubUl.appendChild(addSubLi);
+			var peepData = peepItem[n][0]+" "+peepItem[n][1];
+			addSubLi.innerHTML = peepData;
+			addSubUl.appendChild(editDeleteLks);
+		}
+		createEditDeleteLks(storeKey,addSubUl);
+		allcoWo.appendChild(addLi);
+		}
+	}
+}
+
+var showFriendPeeps = function(){
+	//var addList = document.createElement("ul");
+	//addDiv.appendChild(addList);
+	//document.body.appendChild(addDiv);
+	localStorage.clear();
+	addDefaultPeeps();
+	
+	
+	for(i=0; i < localStorage.length; i++){
+		var addLi = document.createElement("li");
+
+		var editDeleteLks = document.createElement("li");
+
+		var storeKey = localStorage.key(i);
+		var value = localStorage.getItem(storeKey);
+		var peepItem = JSON.parse(value);
+
+		if(peepItem.cat[1] === "Friend"){
+		var addSubUl = document.createElement("ul");
+		addLi.innerHTML = peepItem.fname[1] + " " + peepItem.lname[1];
+		addLi.appendChild(addSubUl);
+
+		say(peepItem.cat[1])
+		getCatImage(peepItem.cat[1],addSubUl);
+
+		for(var n in peepItem){
+			var addSubLi = document.createElement("li");
+			addSubUl.appendChild(addSubLi);
+			var peepData = peepItem[n][0]+" "+peepItem[n][1];
+			addSubLi.innerHTML = peepData;
+			addSubUl.appendChild(editDeleteLks);
+		}
+		createEditDeleteLks(storeKey,addSubUl);
+		allfriends.appendChild(addLi);
+		}
+	}
+}
+
+var showFrienemyPeeps = function(){
+	//var addList = document.createElement("ul");
+	//addDiv.appendChild(addList);
+	//document.body.appendChild(addDiv);
+	localStorage.clear();
+	addDefaultPeeps();
+	
+	
+	for(i=0; i < localStorage.length; i++){
+		var addLi = document.createElement("li");
+
+		var editDeleteLks = document.createElement("li");
+
+		var storeKey = localStorage.key(i);
+		var value = localStorage.getItem(storeKey);
+		var peepItem = JSON.parse(value);
+
+		if(peepItem.cat[1] === "Frienemy"){
+		var addSubUl = document.createElement("ul");
+		addLi.innerHTML = peepItem.fname[1] + " " + peepItem.lname[1];
+		addLi.appendChild(addSubUl);
+
+		say(peepItem.cat[1])
+		getCatImage(peepItem.cat[1],addSubUl);
+
+		for(var n in peepItem){
+			var addSubLi = document.createElement("li");
+			addSubUl.appendChild(addSubLi);
+			var peepData = peepItem[n][0]+" "+peepItem[n][1];
+			addSubLi.innerHTML = peepData;
+			addSubUl.appendChild(editDeleteLks);
+		}
+		createEditDeleteLks(storeKey,addSubUl);
+		allfrienemies.appendChild(addLi);
+		}
+	}
+}
+var showAquetPeeps = function(){
+	//var addList = document.createElement("ul");
+	//addDiv.appendChild(addList);
+	//document.body.appendChild(addDiv);
+	localStorage.clear();
+	addDefaultPeeps();
+	
+	
+	for(i=0; i < localStorage.length; i++){
+		var addLi = document.createElement("li");
+
+		var editDeleteLks = document.createElement("li");
+
+		var storeKey = localStorage.key(i);
+		var value = localStorage.getItem(storeKey);
+		var peepItem = JSON.parse(value);
+
+		if(peepItem.cat[1] === "Aquentence"){
+		var addSubUl = document.createElement("ul");
+		addLi.innerHTML = peepItem.fname[1] + " " + peepItem.lname[1];
+		addLi.appendChild(addSubUl);
+
+		say(peepItem.cat[1])
+		getCatImage(peepItem.cat[1],addSubUl);
+
+		for(var n in peepItem){
+			var addSubLi = document.createElement("li");
+			addSubUl.appendChild(addSubLi);
+			var peepData = peepItem[n][0]+" "+peepItem[n][1];
+			addSubLi.innerHTML = peepData;
+			addSubUl.appendChild(editDeleteLks);
+		}
+		createEditDeleteLks(storeKey,addSubUl);
+		allaquentences.appendChild(addLi);
+		}
+	}
+}
 // Script
 getData();
 
@@ -379,6 +613,22 @@ displayData.addEventListener("click", showData);
 clearData.addEventListener("click", clearLocal);
 
 mopeeps.addEventListener("click", refresh);
+
+searchNavBtn.addEventListener("click", showAllPeeps);
+
+//---------------------------------------------------------//
+
+aquetPagebtn.addEventListener("click", showAquetPeeps);
+
+frienemyPagebtn.addEventListener("click", showFrienemyPeeps);
+
+friendPagebtn.addEventListener("click", showFriendPeeps);
+
+cowoPagebtn.addEventListener("click", showCowoPeeps);
+
+famPagebtn.addEventListener("click", showFamPeeps);
+
+
 
 
 

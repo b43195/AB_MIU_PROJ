@@ -30,8 +30,9 @@
 		</div>
 		<div data-role="content">
 			<a href="#addPeepPage"><img src="images/pcs_feature.png"/></a>
-		<input type="text" id="search" placeholder="Search Peeps"/>
-		<input type="button" value="Search"/>
+			<ul>
+				<li
+			</ul>
 			<p><a href="#addPeepPage" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="slidefade">Add Peep</a></p>	
 		</div>
 		<div data-role="footer" data-position="fixed" data-id="homePage">
@@ -39,7 +40,7 @@
 				<ul>
 					<li><a href="#addPeepPage" data-icon="star" data-iconpos="bottom">Add Peeps</a></li>
 					<li><a href="#catagoriesPage"data-icon="grid" data-iconpos="bottom">Catagories</a></li>
-					<li><a href="#searchPage" data-icon="search" data-iconpos="bottom">Search</a></li>
+					<li><a href="#searchPage" data-icon="search" data-iconpos="bottom" id="searchNavBtn">Search</a></li>
 					<li><a href="#aboutPage "data-icon="info" data-iconpos="bottom">About</a></li>
 				</ul>
 			</div>
@@ -61,15 +62,15 @@
 			</p>
 				<form action="#" method="post" >
 					<fieldset >
-						<legend>Peep Contact</legend>
+						<h2 align="center">Peep Contact</h2>
 							<ul id="errors"s></ul>
-							<ul>
-								<li><label for="fname">First Name </label><input type="text" id="fname"/></li>
-								<li><label for="lname">Last Name </label><input type="text" id="lname"/></li>
-								<li><label for="company">Company </label><input type="text" id="company"/></li>
-								<li><label for="pnum">Phone Number </label><input type="text" id="pnum"/></li>
-								<li><label for="email">Email </label><br><input type="text" placeholder="peep@peepcheat.com" id="email"/></li>
-								<li><label for="addy">Address </label><br><input type="text" id="addy"/></li>	
+							<ul data-role="listview">
+								<li><input type="text" id="fname" placeholder="First Name"/></li>
+								<li><input type="text" id="lname" placeholder="Last Name"/></li>
+								<li><input type="text" id="company" placeholder="Company Name"/></li>
+								<li><input type="text" id="pnum" placeholder="XXX-XXX-XXXX"/></li>
+								<li><br><input type="text" placeholder="peep@peepcheat.com" id="email"/></li>
+								<li><br><input type="text" id="addy" placeholder="Street Address"/></li>	
 							</ul>		
 					</fieldset>	
 					<fieldset>
@@ -108,7 +109,7 @@
 				<ul>
 					<li><a href="#addPeepPage" data-icon="star" data-iconpos="bottom">Add Peeps</a></li>
 					<li><a href="#catagoriesPage"data-icon="grid" data-iconpos="bottom">Catagories</a></li>
-					<li><a href="#searchPage" data-icon="search" data-iconpos="bottom">Search</a></li>
+					<li><a href="#searchPage" data-icon="search" data-iconpos="bottom" id="searchNavBtn">Search</a></li>
 					<li><a href="#aboutPage "data-icon="info" data-iconpos="bottom">About</a></li>
 				</ul>
 			</div>
@@ -121,6 +122,38 @@
 		</div>
 
 		<div data-role="content">
+			<ul data-role="listview">
+				<li>
+					<a href="#familyPage" id="famPagebtn">
+						<img src="images/Family.png">
+						Family
+					</a>
+				</li>
+				<li>
+					<a href="#coworkerPage" id="cowoPagebtn">
+						<img src="images/Co-Worker.png">
+						<h3>Co-Workers</h3>
+					</a>
+				</li>
+				<li>
+					<a href="#friendPage"id="friendPagebtn">
+						<img src="images/Friend.png">
+						<h3>Friends</h3>
+					</a>
+				</li>
+				<li>
+					<a href="#frienemyPage" id="frienemyPagebtn">
+						<img src="images/Frienemy.png">
+						<h3>Frienemies</h3>
+					</a>
+				</li>
+				<li>
+					<a href="#aquentencesPage" id="aquetPagebtn">
+						<img src="images/Aquentence.png">
+						<h3>Aquentences</h3>
+					</a>
+				</li>
+			</ul>
 		</div>
 
 		<div data-role="footer" data-position="fixed" data-id="homePage">
@@ -128,7 +161,7 @@
 				<ul>
 					<li><a href="#addPeepPage" data-icon="star" data-iconpos="bottom">Add Peeps</a></li>
 					<li><a href="#catagoriesPage"data-icon="grid" data-iconpos="bottom">Catagories</a></li>
-					<li><a href="#searchPage" data-icon="search" data-iconpos="bottom">Search</a></li>
+					<li><a href="#searchPage" data-icon="search" data-iconpos="bottom" id="searchNavBtn">Search</a></li>
 					<li><a href="#aboutPage "data-icon="info" data-iconpos="bottom">About</a></li>
 
 				</ul>
@@ -140,6 +173,132 @@
 	<div data-role="page" id="searchPage" data-add-back-btn="true">
 		<div data-role="header" data-position="fixed">
 			<h1>Search</h1>
+		</div>
+		<div data-role="content" id="searchContents">
+				<ul data-role="listview" data-filter="true" id="allPeeps">
+				</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="homePage">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#addPeepPage" data-icon="star" data-iconpos="bottom">Add Peeps</a></li>
+					<li><a href="#catagoriesPage"data-icon="grid" data-iconpos="bottom">Catagories</a></li>
+					<li><a href="#searchPage" data-icon="search" data-iconpos="bottom" id="searchNavBtn">Search</a></li>
+					<li><a href="#aboutPage "data-icon="info" data-iconpos="bottom">About</a></li>
+
+				</ul>
+			</div>
+		</div>
+			</div>
+	</div>
+<!--FamilyPage-->
+	<div data-role="page" id="familyPage" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>Family</h1>
+		</div>
+		<div data-role="content" id="searchContents">
+				<ul data-role="listview" data-filter="true" id="allFamily">
+				</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="homePage">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#addPeepPage" data-icon="star" data-iconpos="bottom">Add Peeps</a></li>
+					<li><a href="#catagoriesPage"data-icon="grid" data-iconpos="bottom">Catagories</a></li>
+					<li><a href="#searchPage" data-icon="search" data-iconpos="bottom" id="searchNavBtn">Search</a></li>
+					<li><a href="#aboutPage "data-icon="info" data-iconpos="bottom">About</a></li>
+
+				</ul>
+			</div>
+		</div>
+			</div>
+	</div>
+<!--Co-Workers-->
+	<div data-role="page" id="coworkerPage" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>Co-Workers</h1>
+		</div>
+		<div data-role="content" id="searchContents">
+				<ul data-role="listview" data-filter="true" id="allcoWo">
+				</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="homePage">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#addPeepPage" data-icon="star" data-iconpos="bottom">Add Peeps</a></li>
+					<li><a href="#catagoriesPage"data-icon="grid" data-iconpos="bottom">Catagories</a></li>
+					<li><a href="#searchPage" data-icon="search" data-iconpos="bottom" id="searchNavBtn">Search</a></li>
+					<li><a href="#aboutPage "data-icon="info" data-iconpos="bottom">About</a></li>
+
+				</ul>
+			</div>
+		</div>
+			</div>
+	</div>
+<!--Friends-->
+	<div data-role="page" id="friendPage" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>Co-Workers</h1>
+		</div>
+		<div data-role="content" id="searchContents">
+				<ul data-role="listview" data-filter="true" id="allfriends">
+				</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="homePage">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#addPeepPage" data-icon="star" data-iconpos="bottom">Add Peeps</a></li>
+					<li><a href="#catagoriesPage"data-icon="grid" data-iconpos="bottom">Catagories</a></li>
+					<li><a href="#searchPage" data-icon="search" data-iconpos="bottom" id="searchNavBtn">Search</a></li>
+					<li><a href="#aboutPage "data-icon="info" data-iconpos="bottom">About</a></li>
+
+				</ul>
+			</div>
+		</div>
+			</div>
+	</div>
+<!--Frienemies-->
+	<div data-role="page" id="frienemyPage" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>Frienemies</h1>
+		</div>
+		<div data-role="content" id="searchContents">
+				<ul data-role="listview" data-filter="true" id="allfrienemies">
+				</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="homePage">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#addPeepPage" data-icon="star" data-iconpos="bottom">Add Peeps</a></li>
+					<li><a href="#catagoriesPage"data-icon="grid" data-iconpos="bottom">Catagories</a></li>
+					<li><a href="#searchPage" data-icon="search" data-iconpos="bottom" id="searchNavBtn">Search</a></li>
+					<li><a href="#aboutPage "data-icon="info" data-iconpos="bottom">About</a></li>
+
+				</ul>
+			</div>
+		</div>
+		</div>
+	</div>
+<!--Aquentences-->
+	<div data-role="page" id="aquentencesPage" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>Aquentences</h1>
+		</div>
+		<div data-role="content" id="searchContents">
+				<ul data-role="listview" data-filter="true" id="allaquentences">
+				</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="homePage">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#addPeepPage" data-icon="star" data-iconpos="bottom">Add Peeps</a></li>
+					<li><a href="#catagoriesPage"data-icon="grid" data-iconpos="bottom">Catagories</a></li>
+					<li><a href="#searchPage" data-icon="search" data-iconpos="bottom" id="searchNavBtn">Search</a></li>
+					<li><a href="#aboutPage "data-icon="info" data-iconpos="bottom">About</a></li>
+
+				</ul>
+			</div>
+		</div>
 		</div>
 	</div>
 
