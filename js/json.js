@@ -63,7 +63,7 @@ var json = {
 		"scissor":["Scissor:","No"],
 		"donor":["Organ Donor:","No"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Friend"],
+		"cat":["Category:","Frienemy"],
 		"quotes":["Best Quotes:","God Bless Ireland"],
 		"notes":["Notes:","Is make believe"]
 	},
@@ -97,7 +97,7 @@ var json = {
 		"scissor":["Scissor:","No"],
 		"donor":["Organ Donor:","No"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Co-Worker"],
+		"cat":["Category:","Frienemy"],
 		"quotes":["Best Quotes:","God Bless Ireland"],
 		"notes":["Notes:","Is make believe"]
 	},
