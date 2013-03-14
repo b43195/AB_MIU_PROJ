@@ -189,6 +189,7 @@ var showData = function(){
 		var addSubUl = document.createElement("ul");
 		addLi.appendChild(addSubUl);
 
+		say(peepItem.cat[1])
 		getCatImage(peepItem.cat[1],addSubUl);
 
 		for(var n in peepItem){

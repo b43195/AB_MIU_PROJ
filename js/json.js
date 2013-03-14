@@ -12,7 +12,7 @@ var json = {
 		"scissor":["Scissor:","Yes"],
 		"donor":["Organ Donor:","Yes"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Friend"],
+		"cat":["Category:","Family"],
 		"quotes":["Best Quotes:","If my name was Press Firmly I would sound so manly"],
 		"notes":["Notes:","Has a wonky eye"]
 	},
@@ -63,7 +63,7 @@ var json = {
 		"scissor":["Scissor:","No"],
 		"donor":["Organ Donor:","No"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Co-Worker"],
+		"cat":["Category:","Friend"],
 		"quotes":["Best Quotes:","God Bless Ireland"],
 		"notes":["Notes:","Is make believe"]
 	},
@@ -80,7 +80,7 @@ var json = {
 		"scissor":["Scissor:","No"],
 		"donor":["Organ Donor:","No"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Co-Worker"],
+		"cat":["Category:","Aquentence"],
 		"quotes":["Best Quotes:","God Bless Ireland"],
 		"notes":["Notes:","Is make believe"]
 	},
@@ -114,7 +114,7 @@ var json = {
 		"scissor":["Scissor:","No"],
 		"donor":["Organ Donor:","No"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Co-Worker"],
+		"cat":["Category:","Aquentence"],
 		"quotes":["Best Quotes:","God Bless Ireland"],
 		"notes":["Notes:","Is make believe"]
 	},
@@ -131,7 +131,7 @@ var json = {
 		"scissor":["Scissor:","No"],
 		"donor":["Organ Donor:","No"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Co-Worker"],
+		"cat":["Category:","Friend"],
 		"quotes":["Best Quotes:","God Bless Ireland"],
 		"notes":["Notes:","Is make believe"]
 	},
@@ -165,7 +165,7 @@ var json = {
 		"scissor":["Scissor:","No"],
 		"donor":["Organ Donor:","No"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Co-Worker"],
+		"cat":["Category:","Aquentence"],
 		"quotes":["Best Quotes:","God Bless Ireland"],
 		"notes":["Notes:","Is make believe"]
 	},
@@ -182,7 +182,7 @@ var json = {
 		"scissor":["Scissor:","No"],
 		"donor":["Organ Donor:","No"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Co-Worker"],
+		"cat":["Category:","Friend"],
 		"quotes":["Best Quotes:","God Bless Ireland"],
 		"notes":["Notes:","Is make believe"]
 	},
@@ -199,7 +199,7 @@ var json = {
 		"scissor":["Scissor:","No"],
 		"donor":["Organ Donor:","No"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Co-Worker"],
+		"cat":["Category:","Family"],
 		"quotes":["Best Quotes:","God Bless Ireland"],
 		"notes":["Notes:","Is make believe"]
 	},
@@ -233,7 +233,7 @@ var json = {
 		"scissor":["Scissor:","No"],
 		"donor":["Organ Donor:","No"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Co-Worker"],
+		"cat":["Category:","Friend"],
 		"quotes":["Best Quotes:","God Bless Ireland"],
 		"notes":["Notes:","Is make believe"]
 	},
@@ -250,7 +250,7 @@ var json = {
 		"scissor":["Scissor:","No"],
 		"donor":["Organ Donor:","No"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Co-Worker"],
+		"cat":["Category:","Aquentence"],
 		"quotes":["Best Quotes:","God Bless Ireland"],
 		"notes":["Notes:","Is make believe"]
 	},
@@ -284,7 +284,7 @@ var json = {
 		"scissor":["Scissor:","No"],
 		"donor":["Organ Donor:","No"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Co-Worker"],
+		"cat":["Category:","Friend"],
 		"quotes":["Best Quotes:","God Bless Ireland"],
 		"notes":["Notes:","Is make believe"]
 	},
@@ -318,7 +318,7 @@ var json = {
 		"scissor":["Scissor:","No"],
 		"donor":["Organ Donor:","No"],
 		"soa":["Awesomeness:","6"],
-		"cat":["Category:","Co-Worker"],
+		"cat":["Category:","Aquentence"],
 		"quotes":["Best Quotes:","God Bless Ireland"],
 		"notes":["Notes:","Is make believe"]
 	},
