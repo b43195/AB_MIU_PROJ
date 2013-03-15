@@ -414,11 +414,9 @@ var showAllPeeps = function(){
 }
 
 var showFamPeeps = function(){
-	//var addList = document.createElement("ul");
-	//addDiv.appendChild(addList);
-	//document.body.appendChild(addDiv);
 	localStorage.clear();
 	addDefaultPeeps();
+	
 	
 	
 	for(i=0; i < localStorage.length; i++){
