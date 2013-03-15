@@ -28,12 +28,16 @@
 		<div data-role="header" data-position="fixed">
 			<h1>Home</h1>
 		</div>
-		<div data-role="content">
+		<div data-role="content" align="center">
 			<a href="#addPeepPage"><img src="images/pcs_feature.png"/></a>
 			<ul>
 				<li
 			</ul>
-			<p><a href="#addPeepPage" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="slidefade">Add Peep</a></p>	
+			<p >
+				<a href="#addPeepPage" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="slidefade">Add Peep</a>
+				<a href="#catagoriesPage" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="slidefade">Browse Peeps</a>
+				<a href="#searchPage" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="slidefade">Find a Peep</a>
+			</p>	
 		</div>
 		<div data-role="footer" data-position="fixed" data-id="homePage">
 			<div data-role="navbar">
@@ -124,31 +128,31 @@
 		<div data-role="content">
 			<ul data-role="listview">
 				<li>
-					<a href="#familyPage" id="famPagebtn">
+					<a href="#familyPage" id="famPagebtn" data-transition="slidefade">
 						<img src="images/Family.png">
 						Family
 					</a>
 				</li>
 				<li>
-					<a href="#coworkerPage" id="cowoPagebtn">
+					<a href="#coworkerPage" id="cowoPagebtn" data-transition="slidefade">
 						<img src="images/Co-Worker.png">
 						<h3>Co-Workers</h3>
 					</a>
 				</li>
 				<li>
-					<a href="#friendPage"id="friendPagebtn">
+					<a href="#friendPage"id="friendPagebtn" data-transition="slidefade">
 						<img src="images/Friend.png">
 						<h3>Friends</h3>
 					</a>
 				</li>
 				<li>
-					<a href="#frienemyPage" id="frienemyPagebtn">
+					<a href="#frienemyPage" id="frienemyPagebtn" data-transition="slidefade">
 						<img src="images/Frienemy.png">
 						<h3>Frienemies</h3>
 					</a>
 				</li>
 				<li>
-					<a href="#aquentencesPage" id="aquetPagebtn">
+					<a href="#aquentencesPage" id="aquetPagebtn" data-transition="slidefade">
 						<img src="images/Aquentence.png">
 						<h3>Aquentences</h3>
 					</a>
@@ -293,6 +297,45 @@
 		<div data-role="content" id="searchContents">
 				<ul data-role="listview" data-filter="true" id="allaquentences">
 				</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="homePage">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#addPeepPage" data-icon="star" data-iconpos="bottom">Add Peeps</a></li>
+					<li><a href="#catagoriesPage"data-icon="grid" data-iconpos="bottom">Catagories</a></li>
+					<li><a href="#searchPage" data-icon="search" data-iconpos="bottom" id="searchNavBtn">Search</a></li>
+					<li><a href="#aboutPage "data-icon="info" data-iconpos="bottom">About</a></li>
+
+				</ul>
+			</div>
+		</div>
+		</div>
+	</div>
+<!--About-->
+	<div data-role="page" id="aboutPage" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>About</h1>
+			<a href="#homePage" data-icon="home">Home</a>
+		</div>
+		<div data-role="content" id="searchContents">
+			<h2>The Peep Cheat Sheet</h2>
+			<p>It's easy to remember things about your peeps when you use The Peep Cheat Sheet.  Try it today!</p>
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="a">
+					<h3>Git Pages Links</h3>
+					<p>
+						<a href="">Gold App</a><br>
+						<a href="">Bronze App</a>
+					</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true"data-theme="a">
+					<h3>Git Repo Link</h3>
+					<p>
+						<a href="">Gold App</a>
+						<a href="">Bronze App</a>
+					</p>
+				</div>
+			</div>
 		</div>
 		<div data-role="footer" data-position="fixed" data-id="homePage">
 			<div data-role="navbar">

@@ -378,9 +378,14 @@ var browseCat = function(){
 }
 
 var showAllPeeps = function(){
-	//var addList = document.createElement("ul");
-	//addDiv.appendChild(addList);
-	//document.body.appendChild(addDiv);
+	if(localStorage.length === 0){
+		var noPeepAddPeep = confirm("There are no Peeps in storage, add Default Peeps?");
+		if(noPeepAddPeep){
+			addDefaultPeeps();
+		}else{
+			window.location.reload(true);
+		}
+	}
 	localStorage.clear();
 	addDefaultPeeps();
 	
@@ -414,6 +419,14 @@ var showAllPeeps = function(){
 }
 
 var showFamPeeps = function(){
+	if(localStorage.length === 0){
+		var noPeepAddPeep = confirm("There are no Peeps in storage, add Default Peeps?");
+		if(noPeepAddPeep){
+			addDefaultPeeps();
+		}else{
+			window.location.reload(true);
+		}
+	}
 	localStorage.clear();
 	addDefaultPeeps();
 	
@@ -450,9 +463,14 @@ var showFamPeeps = function(){
 }
 
 var showCowoPeeps = function(){
-	//var addList = document.createElement("ul");
-	//addDiv.appendChild(addList);
-	//document.body.appendChild(addDiv);
+	if(localStorage.length === 0){
+		var noPeepAddPeep = confirm("There are no Peeps in storage, add Default Peeps?");
+		if(noPeepAddPeep){
+			addDefaultPeeps();
+		}else{
+			window.location.reload(true);
+		}
+	}
 	localStorage.clear();
 	addDefaultPeeps();
 	
@@ -488,9 +506,14 @@ var showCowoPeeps = function(){
 }
 
 var showFriendPeeps = function(){
-	//var addList = document.createElement("ul");
-	//addDiv.appendChild(addList);
-	//document.body.appendChild(addDiv);
+	if(localStorage.length === 0){
+		var noPeepAddPeep = confirm("There are no Peeps in storage, add Default Peeps?");
+		if(noPeepAddPeep){
+			addDefaultPeeps();
+		}else{
+			window.location.reload(true);
+		}
+	}
 	localStorage.clear();
 	addDefaultPeeps();
 	
@@ -526,9 +549,14 @@ var showFriendPeeps = function(){
 }
 
 var showFrienemyPeeps = function(){
-	//var addList = document.createElement("ul");
-	//addDiv.appendChild(addList);
-	//document.body.appendChild(addDiv);
+	if(localStorage.length === 0){
+		var noPeepAddPeep = confirm("There are no Peeps in storage, add Default Peeps?");
+		if(noPeepAddPeep){
+			addDefaultPeeps();
+		}else{
+			window.location.reload(true);
+		}
+	}
 	localStorage.clear();
 	addDefaultPeeps();
 	
@@ -563,13 +591,15 @@ var showFrienemyPeeps = function(){
 	}
 }
 var showAquetPeeps = function(){
-	//var addList = document.createElement("ul");
-	//addDiv.appendChild(addList);
-	//document.body.appendChild(addDiv);
-	localStorage.clear();
-	addDefaultPeeps();
-	
-	
+	if(localStorage.length === 0){
+		var noPeepAddPeep = confirm("There are no Peeps in storage, add Default Peeps?");
+		if(noPeepAddPeep){
+			addDefaultPeeps();
+		}else{
+			window.location.reload(true);
+		}
+	}
+
 	for(i=0; i < localStorage.length; i++){
 		var addLi = document.createElement("li");
 
@@ -580,22 +610,22 @@ var showAquetPeeps = function(){
 		var peepItem = JSON.parse(value);
 
 		if(peepItem.cat[1] === "Aquentence"){
-		var addSubUl = document.createElement("ul");
-		addLi.innerHTML = peepItem.fname[1] + " " + peepItem.lname[1];
-		addLi.appendChild(addSubUl);
+			var addSubUl = document.createElement("ul");
+			addLi.innerHTML = peepItem.fname[1] + " " + peepItem.lname[1];
+			addLi.appendChild(addSubUl);
 
-		say(peepItem.cat[1])
-		getCatImage(peepItem.cat[1],addSubUl);
+			say(peepItem.cat[1])
+			getCatImage(peepItem.cat[1],addSubUl);
 
-		for(var n in peepItem){
-			var addSubLi = document.createElement("li");
-			addSubUl.appendChild(addSubLi);
-			var peepData = peepItem[n][0]+" "+peepItem[n][1];
-			addSubLi.innerHTML = peepData;
-			addSubUl.appendChild(editDeleteLks);
-		}
-		createEditDeleteLks(storeKey,addSubUl);
-		allaquentences.appendChild(addLi);
+			for(var n in peepItem){
+				var addSubLi = document.createElement("li");
+				addSubUl.appendChild(addSubLi);
+				var peepData = peepItem[n][0]+" "+peepItem[n][1];
+				addSubLi.innerHTML = peepData;
+				addSubUl.appendChild(editDeleteLks);
+			}
+			createEditDeleteLks(storeKey,addSubUl);
+			allaquentences.appendChild(addLi);
 		}
 	}
 }
