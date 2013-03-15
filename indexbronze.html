@@ -30,12 +30,108 @@
 		</div>
 		<div data-role="content" align="center">
 			<a href="#addPeepPage"><img src="images/pcs_feature.png"/></a>
-			<ul data-role="listview" data-inset="true">
-				<li><a href="#addPeepPage"data-transition="slidefade">Add Peep</a></li>
-				<li><a href="#catagoriesPage"data-transition="slidefade">Browse Peeps</a></li>
-				<li><a href="#searchPage" data-transition="slidefade">Find a Peep</a></li>
-			</ul>	
+			<div data-role="collapsible-set">
+			<div data-role="collapsible">
+				<h3>Add Peep</h3>
+				<p><div id="peepForm">
+				<div data-role="controlgroup" data-type="horizontal" align="center">
+					<a href="#searchPage" id="displayData" data-role="button">Show Data</a>  
+					<a href="#" id="cleardata" data-role="button">Clear All</a>
+					<!--<a href="#" id="mopeeps" data-role="button">add peeps</a>-->
+				</div>
+				<form action="#" method="post" >
+					<fieldset >
+							<ul id="errors"s></ul>
+							<ul data-role="listview">
+								<li><input type="text" id="fname" placeholder="First Name"/></li>
+								<li><input type="text" id="lname" placeholder="Last Name"/></li>
+								<li><input type="text" id="company" placeholder="Company Name"/></li>
+								<li><input type="text" id="pnum" placeholder="XXX-XXX-XXXX"/></li>
+								<li><br><input type="text" placeholder="peep@peepcheat.com" id="email"/></li>
+								<li><br><input type="text" id="addy" placeholder="Street Address"/></li>	
+							</ul>		
+					</fieldset>	
+					<fieldset>
+						<legend>Peep Details</legend>
+							<ul>
+								<li><label for="bday">Birthday </label><input type="date" id="bday"/></li>
+								<li>Rock Paper Scissors?:
+									<ul>
+										<li><input type="checkbox" value="Rock" id="rock" /><label for="rock">Rock</label></li>
+										<li><input type="checkbox" value="Paper" id="paper" /><label for="paper">Paper</label></li>
+										<li><input type="checkbox" value="Scissor" id="scissor" /><label for="scissor">Scissor</label></li>
+									</ul>
+								</li>
+								<li>Organ Donor?
+									<ul>
+										<li><input type="radio" checked value="Yes" id="yes" name="donor" /><label for="yes">Yes</label></li>
+										<li><input type="radio" value="No" id="no" name="donor" /><label for="no">No</label></li>
+									</ul>
+								</li>
+								<li><label for="soa">Scale of Awesomeness </label><input type="range" name="soa" id="soa" min="1" max="10"><p id="soanum"></p></li>
+								<li><label for="cat">Category </label>
+									<select id="cat">
+									</select>
+								</li>
+								<li><label for="quotes">Best Quotes </label><br><textarea id="quotes"></textarea></li>
+								<li><label for="notes">Notes </label><br><textarea id="notes"></textarea></li>
+							</ul>
+					</fieldset>
+					<input type="button" id="addPeep" value="Add Peep!"/>
+				</form>
+			</div></p>
+			</div>
+			<div data-role="collapsible">
+					<h3>Browse Peeps</h3>
+					<p>
+						<ul data-role="listview">
+					<li>
+						<a href="#familyPage" id="famPagebtn" data-transition="slidefade">
+							<img src="images/Family.png">
+							Family
+						</a>
+					</li>
+					<li>
+						<a href="#coworkerPage" id="cowoPagebtn" data-transition="slidefade">
+							<img src="images/Co-Worker.png">
+							<h3>Co-Workers</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#friendPage"id="friendPagebtn" data-transition="slidefade">
+							<img src="images/Friend.png">
+							<h3>Friends</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#frienemyPage" id="frienemyPagebtn" data-transition="slidefade">
+							<img src="images/Frienemy.png">
+							<h3>Frienemies</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#aquentencesPage" id="aquetPagebtn" data-transition="slidefade">
+							<img src="images/Aquentence.png">
+							<h3>Aquentences</h3>
+						</a>
+					</li>
+				</ul>
+			</div>
+				</p>
+			</div>
+			<div data-role="collapsible">
+				<h3>Find Peeps</h3>
+				<p>
+					<ul data-role="listview" data-filter="true" id="allPeeps">
+				</ul>
 		</div>
+		<div data-role="footer" data-position="fixed" data-id="homePage">
+			<div data-role="navbar">
+				<ul>
+				</p>
+			</div>
+		</div>
+	</div>
 		<div data-role="footer" data-position="fixed" data-id="homePage">
 			<div data-role="navbar">
 				<ul>
@@ -46,7 +142,6 @@
 				</ul>
 			</div>
 		</div>
-	</div>
 	</div>
 <!--Add Peep Page-->
 	<div data-role="page" id="addPeepPage" data-theme="a" add-back-btn="true">
@@ -322,15 +417,14 @@
 				<div data-role="collapsible" data-collapsed="true" data-theme="a">
 					<h3>Git Pages Links</h3>
 					<p>
-						<a href="">Gold App</a><br>
-						<a href="">Bronze App</a>
+						<a href="http://b43195.github.com/AB_MIU_PROJ/index.html">Gold App</a>
+						<a href="http://b43195.github.com/AB_MIU_PROJ/indexbronze.html">Bronze App</a>
 					</p>
 				</div>
 				<div data-role="collapsible" data-collapsed="true"data-theme="a">
 					<h3>Git Repo Link</h3>
 					<p>
-						<a href="http://b43195.github.com/AB_MIU_PROJ/index.html">Gold App</a>
-						<a href="http://b43195.github.com/AB_MIU_PROJ/indexbronze.html">Bronze App</a>
+						
 					</p>
 				</div>
 			</div>
