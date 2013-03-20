@@ -241,7 +241,7 @@ var editItem = function(){
 
 	//Show form again
 	var div = document.getElementsByTagName("div");	
-	div[0].removeAttribute("class","remove");
+	//div[0].removeAttribute("class","remove");
 	//repopulate form
 	fname.value = data.fname[1];
 	lname.value = data.lname[1];
@@ -262,13 +262,13 @@ var editItem = function(){
 			radio1.setAttribute("checked","checked")
 		}
 	if(data.rock[1] == "Yes"){
-		rock.setAttribute("Checked, Checked");
+		rock.setAttribute("Checked", "Checked");
 	}
 	if(data.paper[1] == "Yes"){
-		paper.setAttribute("Checked, Checked");
+		paper.setAttribute("Checked", "Checked");
 	}
 	if(data.scissor[1] == "Yes"){
-		scissor.setAttribute("Checked, Checked");
+		scissor.setAttribute("Checked", "Checked");
 	}
 
 	soa.value = data.soa[1];
@@ -281,8 +281,6 @@ var editItem = function(){
 	var editPeep = addPeep;
 	editPeep.addEventListener("click", validator);
 	editPeep.key = this.key;
-
-
 }
 
 var validator = function(eventData){
@@ -386,11 +384,7 @@ var showAllPeeps = function(){
 			window.location.reload(true);
 		}
 	}
-	localStorage.clear();
-	addDefaultPeeps();
-	
-	
-	for(i=0; i < localStorage.length; i++){
+	for(i=0; i <= localStorage.length; i++){
 		var addLi = document.createElement("li");
 		allPeeps.appendChild(addLi);
 
@@ -427,12 +421,8 @@ var showFamPeeps = function(){
 			window.location.reload(true);
 		}
 	}
-	localStorage.clear();
-	addDefaultPeeps();
-	
-	
-	
-	for(i=0; i < localStorage.length; i++){
+
+	for(i=0; i <= localStorage.length; i++){
 		var addLi = document.createElement("li");
 
 		var editDeleteLks = document.createElement("li");
@@ -471,11 +461,9 @@ var showCowoPeeps = function(){
 			window.location.reload(true);
 		}
 	}
-	localStorage.clear();
-	addDefaultPeeps();
 	
 	
-	for(i=0; i < localStorage.length; i++){
+	for(i=0; i <= localStorage.length; i++){
 		var addLi = document.createElement("li");
 
 		var editDeleteLks = document.createElement("li");
@@ -514,11 +502,8 @@ var showFriendPeeps = function(){
 			window.location.reload(true);
 		}
 	}
-	localStorage.clear();
-	addDefaultPeeps();
-	
-	
-	for(i=0; i < localStorage.length; i++){
+
+	for(i=0; i <= localStorage.length; i++){
 		var addLi = document.createElement("li");
 
 		var editDeleteLks = document.createElement("li");
@@ -557,11 +542,7 @@ var showFrienemyPeeps = function(){
 			window.location.reload(true);
 		}
 	}
-	localStorage.clear();
-	addDefaultPeeps();
-	
-	
-	for(i=0; i < localStorage.length; i++){
+	for(i=0; i <= localStorage.length; i++){
 		var addLi = document.createElement("li");
 
 		var editDeleteLks = document.createElement("li");
@@ -600,7 +581,7 @@ var showAquetPeeps = function(){
 		}
 	}
 
-	for(i=0; i < localStorage.length; i++){
+	for(i=0; i <= localStorage.length; i++){
 		var addLi = document.createElement("li");
 
 		var editDeleteLks = document.createElement("li");
